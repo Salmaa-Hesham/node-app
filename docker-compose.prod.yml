@@ -1,0 +1,11 @@
+version: "3"
+services:
+  app:
+    build: 
+      context: .
+      #args:   #args:  # when using the docker file without staging so we need to pass args
+      #  - Node-ENV=production
+      target: production  # when we are using staging in the docker file we need to specify the stage
+    environment:
+      - Node-ENV=production
+    command: npm start
