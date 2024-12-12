@@ -11,3 +11,4 @@ services:
     environment:
       - NODE-ENV=development
     command: npm run start-dev
+    
