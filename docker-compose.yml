@@ -2,10 +2,8 @@ version: "3"
 services:
   app:
     container_name: express-app-container
-    build: .  # Docker Compose will detect the Dockerfile in this directory
-    volumes:
-      - ./src:/app/src:ro  # Mount the source code directory as read-only
     ports:
       - "4000:4000"  # Map port 4000 on the host to port 4000 in the container
     env_file: 
       - ./.env  # Reference the .env file for environment variables
+
